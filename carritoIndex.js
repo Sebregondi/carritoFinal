@@ -41,9 +41,9 @@ const agregarProductoAlCarrito = (productoID, carritoDeCompras) => {
     actualizarCarrito (carritoDeCompras);
 };
 
-export const eliminarProductosCarrito = (productoId) => {
+export const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
-    const carritoActualizado = carritoStorage.filter (el.id != productoId);
+    const carritoActualizado = carritoStorage.filter (el => el.id != productoId);
 
     actualizarCarrito (carritoActualizado);
     pintarProductosCarrito (carritoActualizado);
