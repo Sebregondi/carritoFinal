@@ -7,21 +7,16 @@ export const mostrarProductos = (productos) => {
     productos.forEach (producto => {
         const div = document.createElement ('div');
         div.classList.add ('card');
-        div.innerHTML += `<div class="card mb-4 shadow-sm">
-        <div class="card-header">
-            <h4 class="my-0 font-weight-bold">${producto.nombre}</h4>
-        </div>
-        <div class="card-body">
-            <img src=${producto.img} class="card-img-top">
-            <h1 class="card-title pricing-card-title precio"><span class="">${producto.precio}</span></h1>
-
-            <ul class="list-unstyled mt-3 mb-4">
-                <li></li>
-                <li><b> Jorge Luis Borges</b></li>
-                <li>${producto.genero}</li>
-            </ul>
-            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
-        </div>
+        div.innerHTML += `<div class="card-image">
+        <img src=${producto.img}>
+        <span class="card-title">$${producto.precio}</span>
+        <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
+    </div>
+    <div class="card-content">
+        <p><b>Título:</b> ${producto.nombre}</p>
+        <p><b>Autor:</b> ${producto.autor}</p>
+        <p><b>Género:</b> ${producto.genero}</p>
+        <p><b>Extensión:</b> ${producto.pags}</p>
     </div>`
 
     contenedorProductos.appendChild(div);
