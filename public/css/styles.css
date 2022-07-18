@@ -20,12 +20,12 @@ header {
   align-items: center;
   padding: 20px 10%;
   /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  box-shadow: #26a69a 0px 3px 12px;
   /* margin-bottom: 20px; */
 }
 
 h1 {
-  color: rgb(225, 76, 65);
+  color: #26a69a;
   text-transform: uppercase;
   font-weight: 500px;
   font-size: 30px;
@@ -34,7 +34,7 @@ h1 {
 
 #cesta-carrito {
   border: none;
-  color: rgb(225, 76, 65);
+  color: #26a69a;
   font-size: 30px;
   background-color: white;
   border-radius: 50%;
@@ -45,7 +45,7 @@ h1 {
 #cesta-carrito:hover {
   cursor: pointer;
   color: white;
-  background-color: rgb(225, 76, 65);
+  background-color: #0f5c54;
 }
 
 #cesta-carrito:focus {
@@ -70,7 +70,7 @@ p {
   max-width: 30%;
   padding: 10px;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: #26a69a 0px 5px 15px 0px;
 }
 
 select {
@@ -107,7 +107,7 @@ select {
   margin-top: -100%;
   transition: all .5s;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: #26a69a 0px 5px 15px 0px;
 }
 
 .modal-active .modal-carrito {
@@ -115,7 +115,7 @@ select {
 }
 
 .modal-carrito h3 {
-  color: rgb(225, 76, 65);
+  color: #26a69a;
   padding-bottom: 5px;
 }
 
@@ -124,7 +124,7 @@ select {
   top: 15px;
   right: 15px;
   font-size: 20px;
-  color: rgb(225, 76, 65) !important;
+  color: #26a69a !important;
   border: none;
   background-color: white;
 }
@@ -142,7 +142,7 @@ select {
 }
 
 .card .card-image .card-title {
-  color: rgb(225, 76, 65);
+  color: #26a69a;
   position: unset
 }
 
@@ -164,7 +164,7 @@ select {
   background-color: white;
   color: #ff6961;
   border: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .boton-eliminar:hover {

@@ -21,9 +21,9 @@ const contarProductosRepetidos = (prodRepetido, productoID, carritoDeCompras) =>
     }
 }
 
-const agregarProductoAlCarrito = (productoID, carritoDeCompras) => {
+const agregarProductoAlCarrito = (productoId, carritoDeCompras) => {
     const contenedor = document.getElementById ('carrito-contenedor');
-    const producto = productos.find (producto => producto.id == productoID);
+    const producto = productos.find (producto => producto.id == productoId);
     carritoDeCompras.push (producto);
 
     producto.cantidad = 1;

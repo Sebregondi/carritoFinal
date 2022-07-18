@@ -12,13 +12,15 @@ const productos = await getData();
         div.innerHTML += `<div class="card-image">
         <img src=${producto.img}>
         <span class="card-title">$${producto.precio}</span>
-        <a class="btn-floating halfway-fab wabes-effect waves-light red" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
+        
     </div>
     <div class="card-content">
         <p><b>Título:</b> ${producto.nombre}</p>
         <p><b>Autor:</b> ${producto.autor}</p>
         <p><b>Género:</b> ${producto.genero}</p>
         <p><b>Extensión:</b> ${producto.pags}</p>
+<br>
+        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1" id=boton${producto.id}>Agregar al carrito</a>
     </div>`
 
     contenedorProductos.appendChild(div);
