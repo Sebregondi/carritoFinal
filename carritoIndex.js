@@ -1,5 +1,5 @@
 import { actualizarCarrito } from "./actualizarCarrito.js";
-import { productos } from "./stock.js";
+import { getData } from "./getData.js";
 
 export const carritoIndex = (productoID) => {
     let carritoDeCompras = [];
