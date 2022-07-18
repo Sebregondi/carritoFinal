@@ -1,3 +1,5 @@
+const productos =
+
 [
     {nombre: "El aleph",
     precio: 3649,
@@ -35,3 +37,5 @@
     img: "/img/LaCifra.jpg",
     id: 6}
 ]
+
+export {productos}
