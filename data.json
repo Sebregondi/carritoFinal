@@ -37,7 +37,7 @@
     "cantidad": 1,
     "id": 4},
 
-    {"ombre": "La rosa profunda",
+    {"nombre": "La rosa profunda",
     "autor": "Jorge Luis Borges",
     "pags": "120 páginas",
     "precio": 2999,
