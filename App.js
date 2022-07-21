@@ -20,7 +20,7 @@ const productos = await getData();
         <p><b>Género:</b> ${producto.genero}</p>
         <p><b>Extensión:</b> ${producto.pags}</p>
 <br>
-        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1" id=boton${producto.id}>Agregar al carrito</a>
+        <a class="btn btn-block btn-primary agregar-carrito" data-id="1" id=boton${producto.id}>Agregar al carrito</a>
     </div>`
 
     contenedorProductos.appendChild(div);
