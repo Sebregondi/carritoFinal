@@ -33,6 +33,43 @@ const productos = await getData();
         duration: 3000,
         position: "center"
         }).showToast()
-        });   
+        });
+        
+    const vaciar = document.getElementById ('vaciar-carrito');
+    vaciar.addEventListener ('click', () => {
+        Swal.fire ({
+            title: "Eliminado",
+            text: "Vaciaste el carrito",
+            icon: "error",
+            duration: 3000
+        })
+    })
+
+    const procesar = document.getElementById ('procesar-pedido');
+    procesar.addEventListener ('click', () => {
+        let timerInterval
+        Swal.fire({
+        title: 'Aguarde mientras procesamos su pedido',
+        html: 'Este cuadro se cerrará en <b></b> milisegundos.',
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {
+        b.textContent = Swal.getTimerLeft()
+        }, 100)
+        },
+        willClose: () => {
+        clearInterval(timerInterval)
+        }
+            }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+        }
+    })
+    })
+
     });
 }
