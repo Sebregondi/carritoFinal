@@ -33,6 +33,6 @@ const productos = await getData();
         duration: 3000,
         position: "center"
         }).showToast()
-        });
+        });   
     });
 }

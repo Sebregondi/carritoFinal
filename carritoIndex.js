@@ -5,11 +5,11 @@ export const carritoIndex = (productoID) => {
     let carritoDeCompras = [];
     if (localStorage.getItem ("carrito")) {
         carritoDeCompras = obtenerCarritoStorage();
-    }
+    };
 
     let productoRepetido = carritoDeCompras.find (producto => producto.id == productoID);
     contarProductosRepetidos (productoRepetido, productoID, carritoDeCompras);
-}
+};
 
 const contarProductosRepetidos = (prodRepetido, productoID, carritoDeCompras) => {
     if (prodRepetido) {
@@ -18,8 +18,8 @@ const contarProductosRepetidos = (prodRepetido, productoID, carritoDeCompras) =>
         actualizarCarrito (carritoDeCompras);
     } else {
         agregarProductoAlCarrito (productoID, carritoDeCompras);
-    }
-}
+    };
+};
 
 const agregarProductoAlCarrito = async (productoId, carritoDeCompras) => {
     const contenedor = document.getElementById ('carrito-contenedor');
@@ -35,7 +35,7 @@ const agregarProductoAlCarrito = async (productoId, carritoDeCompras) => {
 
     div.innerHTML = `<p>${producto.nombre}</p>
                     <p>Precio: ${producto.precio}</p>
-                    <p id=cantidad${producto.id}>Cantidad:${producto.cantidad}</p>
+                    <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
                     <button id=eliminar${producto.id}
                     class="btn waves-effect waves-light boton-eliminar" value ="${producto.id}">X</i></button>`
 
@@ -65,10 +65,19 @@ export const pintarProductosCarrito = (carritoDeCompras) => {
                         <button id=eliminar${producto.id} class="btn waves-effect waves-light boton-eliminar" value="${producto.id}">X</button>`
 
         contenedor.appendChild(div);
+
+    const btnEliminar = document.getElementById(`eliminar${producto.id}`);
+    btnEliminar.addEventListener ('click', () => {
+        Toastify({
+        text: "Item eliminado",
+        duration: 3000,
+        position: "center"
+        }).showToast()
+        }); 
     });
 };
 
 export const obtenerCarritoStorage = () => {
     const carritoStorage = JSON.parse (localStorage.getItem ("carrito"))
     return carritoStorage;
-}
+};
