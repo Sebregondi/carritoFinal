@@ -28,6 +28,11 @@ const productos = await getData();
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
     carritoIndex(producto.id);
+    Toastify({
+        text: "Producto agregado al carrito",
+        duration: 3000,
+        position: "center"
+        }).showToast()
         });
     });
 }
