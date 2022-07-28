@@ -78,6 +78,13 @@ export const pintarProductosCarrito = (carritoDeCompras) => {
 };
 
 export const obtenerCarritoStorage = () => {
-    const carritoStorage = JSON.parse (localStorage.getItem ("carrito"))
+    const carritoStorage = JSON.parse (localStorage.getItem ("carrito"));
     return carritoStorage;
 };
+
+const btnVaciar = document.getElementById ('vaciar-carrito');
+btnVaciar.addEventListener ('click', () => {
+    
+
+    pintarProductosCarrito();
+});
