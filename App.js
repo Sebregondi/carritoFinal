@@ -40,10 +40,9 @@ const productos = await getData();
         Swal.fire ({
             title: "Eliminado",
             text: "Vaciaste el carrito",
-            icon: "error",
-            duration: 3000
+            icon: "error"
         })
-    })
+    });
 
     const procesar = document.getElementById ('procesar-pedido');
     procesar.addEventListener ('click', () => {
