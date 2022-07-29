@@ -50,7 +50,7 @@ export const mostrarProductos = async () => {
             Swal.fire({
                 title: 'Aguarde mientras procesamos su pedido',
                 html: 'Este cuadro se cerrará en <b></b> milisegundos.',
-                timer: 2000,
+                timer: 3000,
                 timerProgressBar: true,
                 didOpen: () => {
                     Swal.showLoading()
