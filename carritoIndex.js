@@ -57,9 +57,16 @@ btnVaciar.addEventListener('click', () => {
     const carritoObtenido = obtenerCarritoStorage();
     carritoObtenido.length = 0;
 
-    actualizarCarrito (carritoObtenido);
+    actualizarCarrito(carritoObtenido);
     pintarProductosCarrito(carritoObtenido);
-    console.log (carritoObtenido)
+
+    Swal.fire({
+        icon: 'info',
+        iconColor: '#26a69a',
+        confirmButtonColor: '#26a69a',
+        title: '¡Listo!',
+        text: 'Vaciaste el carrito'
+    })
 });
 
 export const pintarProductosCarrito = (carritoDeCompras) => {
@@ -80,9 +87,10 @@ export const pintarProductosCarrito = (carritoDeCompras) => {
         const btnEliminar = document.getElementById(`eliminar${producto.id}`);
         btnEliminar.addEventListener('click', () => {
             Toastify({
-                text: "Item eliminado",
-                duration: 3000,
-                position: "center"
+                text: "Producto eliminado",
+                duration: 1500,
+                position: "right",
+                backgroundColor: "linear-gradient(to right, #26a69a, #26a69a"
             }).showToast()
         });
     });

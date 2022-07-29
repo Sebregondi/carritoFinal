@@ -29,20 +29,12 @@ export const mostrarProductos = async () => {
         boton.addEventListener('click', () => {
             carritoIndex(producto.id);
             Toastify({
-                text: "Producto agregado al carrito",
-                duration: 3000,
-                position: "center"
+                text: "Producto agregado",
+                duration: 1500,
+                position: "right",
+                backgroundColor: "linear-gradient(to right, #26a69a, #26a69a"
             }).showToast()
         });
-
-        // const btnVaciar = document.getElementById ('vaciar-carrito');
-        // btnVaciar.addEventListener ('click', () => {
-        //     Swal.fire ({
-        //         title: "Eliminado",
-        //         text: "Vaciaste el carrito",
-        //         icon: "error"
-        //     })
-        // });
 
         const procesar = document.getElementById('procesar-pedido');
         procesar.addEventListener('click', () => {
@@ -50,7 +42,7 @@ export const mostrarProductos = async () => {
             Swal.fire({
                 title: 'Aguarde mientras procesamos su pedido',
                 html: 'Este cuadro se cerrará en <b></b> milisegundos.',
-                timer: 3000,
+                timer: 2000,
                 timerProgressBar: true,
                 didOpen: () => {
                     Swal.showLoading()
