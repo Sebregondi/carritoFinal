@@ -77,16 +77,6 @@ export const pintarProductosCarrito = (carritoDeCompras) => {
 
         contenedor.appendChild(div);
 
-        const btnVaciar = document.getElementById('vaciar-carrito');
-        btnVaciar.addEventListener('click', () => {
-
-            const carritoObtenido = obtenerCarritoStorage();
-            carritoObtenido.length = 0;
-
-            pintarProductosCarrito(carritoObtenido);
-            console.log (carritoObtenido)
-        });
-
         const btnEliminar = document.getElementById(`eliminar${producto.id}`);
         btnEliminar.addEventListener('click', () => {
             Toastify({
