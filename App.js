@@ -28,6 +28,9 @@ export const mostrarProductos = async () => {
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', () => {
             carritoIndex(producto.id);
+            document.getElementById ('vaciar-carrito').disabled = false;
+            document.getElementById ('procesar-pedido').disabled = false;
+
             Toastify({
                 text: "Producto agregado",
                 duration: 1500,
