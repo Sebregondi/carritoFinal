@@ -54,6 +54,9 @@ export const eliminarProductoCarrito = (productoId) => {
 const btnVaciar = document.getElementById('vaciar-carrito');
 btnVaciar.addEventListener('click', () => {
 
+    document.getElementById ('vaciar-carrito').disabled = true;
+    document.getElementById ('procesar-pedido').disabled = true;
+
     const carritoObtenido = obtenerCarritoStorage();
     carritoObtenido.length = 0;
 
