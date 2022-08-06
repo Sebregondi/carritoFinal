@@ -1,6 +1,11 @@
 import { actualizarCarrito } from "./actualizarCarrito.js";
 import { getData } from "./getData.js";
 
+const btnCesta = document.getElementById ('cesta-carrito');
+const btnVaciar = document.getElementById('vaciar-carrito');
+const btnProcesar = document.getElementById ('procesar-pedido');
+
+
 export const carritoIndex = (productoID) => {
     let carritoDeCompras = [];
     if (localStorage.getItem("carrito")) {
@@ -51,11 +56,10 @@ export const eliminarProductoCarrito = (productoId) => {
     pintarProductosCarrito(carritoActualizado);
 };
 
-const btnVaciar = document.getElementById('vaciar-carrito');
 btnVaciar.addEventListener('click', () => {
 
-    document.getElementById ('vaciar-carrito').disabled = true;
-    document.getElementById ('procesar-pedido').disabled = true;
+    btnVaciar.disabled = true;
+    btnProcesar.disabled = true;
 
     const carritoObtenido = obtenerCarritoStorage();
     carritoObtenido.length = 0;
