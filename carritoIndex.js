@@ -44,6 +44,8 @@ const agregarProductoAlCarrito = async (productoId, carritoDeCompras) => {
                     <button id=eliminar${producto.id}
                     class="btn waves-effect waves-light boton-eliminar" value ="${producto.id}">X</i></button>`
 
+    btnCesta.disabled = false;
+
     contenedor.appendChild(div);
     actualizarCarrito(carritoDeCompras);
 };
@@ -60,6 +62,7 @@ btnVaciar.addEventListener('click', () => {
 
     btnVaciar.disabled = true;
     btnProcesar.disabled = true;
+    btnCesta.disabled = true;
 
     const carritoObtenido = obtenerCarritoStorage();
     carritoObtenido.length = 0;
