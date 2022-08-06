@@ -174,3 +174,9 @@ select {
 .boton-eliminar:focus {
   outline: none;
 }
+
+.btnMutantes {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15px;
+}
