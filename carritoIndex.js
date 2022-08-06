@@ -48,11 +48,6 @@ const agregarProductoAlCarrito = async (productoId, carritoDeCompras) => {
 
     contenedor.appendChild(div);
     actualizarCarrito(carritoDeCompras);
-
-    // if (contenedor.firstChild.innerHTML != null) {
-    //     btnVaciar.disabled = false;
-    //     btnProcesar.disabled = false;
-    // };
 };
 
 export const eliminarProductoCarrito = (productoId) => {
