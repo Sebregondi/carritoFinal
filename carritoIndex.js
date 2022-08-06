@@ -62,9 +62,9 @@ export const eliminarProductoCarrito = (productoId) => {
     if (carritoActualizado.length === 0) {
         btnVaciar.disabled = true;
         btnProcesar.disabled = true;
+        btnCesta.disabled = true;
         actualizarCarrito(carritoActualizado);
         pintarProductosCarrito(carritoActualizado);
-
     } else {
         actualizarCarrito(carritoActualizado);
         pintarProductosCarrito(carritoActualizado);
