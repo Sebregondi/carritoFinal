@@ -48,14 +48,27 @@ const agregarProductoAlCarrito = async (productoId, carritoDeCompras) => {
 
     contenedor.appendChild(div);
     actualizarCarrito(carritoDeCompras);
+
+    // if (contenedor.firstChild.innerHTML != null) {
+    //     btnVaciar.disabled = false;
+    //     btnProcesar.disabled = false;
+    // };
 };
 
 export const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(el => el.id != productoId);
 
-    actualizarCarrito(carritoActualizado);
-    pintarProductosCarrito(carritoActualizado);
+    if (carritoActualizado.length === 0) {
+        btnVaciar.disabled = true;
+        btnProcesar.disabled = true;
+        actualizarCarrito(carritoActualizado);
+        pintarProductosCarrito(carritoActualizado);
+
+    } else {
+        actualizarCarrito(carritoActualizado);
+        pintarProductosCarrito(carritoActualizado);
+    };
 };
 
 btnVaciar.addEventListener('click', () => {

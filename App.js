@@ -64,6 +64,5 @@ export const mostrarProductos = async () => {
                 }
             })
         })
-
     });
 }
