@@ -84,7 +84,7 @@ btnVaciar.addEventListener('click', () => {
         confirmButtonColor: '#26a69a',
         title: '¡Listo!',
         text: 'Vaciaste el carrito'
-    })
+    });
 });
 
 export const pintarProductosCarrito = (carritoDeCompras) => {
@@ -109,7 +109,7 @@ export const pintarProductosCarrito = (carritoDeCompras) => {
                 duration: 1500,
                 position: "right",
                 backgroundColor: "linear-gradient(to right, #26a69a, #26a69a)"
-            }).showToast()
+            }).showToast();
         });
     });
 };

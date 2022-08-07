@@ -9,5 +9,5 @@ document.addEventListener ("DOMContentLoaded", () => {
         const carritoStorage = obtenerCarritoStorage();
         pintarProductosCarrito (carritoStorage);
         actualizarCarrito (carritoStorage);
-    }
-})
+    };
+});
