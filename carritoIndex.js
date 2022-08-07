@@ -108,7 +108,7 @@ export const pintarProductosCarrito = (carritoDeCompras) => {
                 text: "Producto eliminado",
                 duration: 1500,
                 position: "right",
-                backgroundColor: "linear-gradient(to right, #26a69a, #26a69a"
+                backgroundColor: "linear-gradient(to right, #26a69a, #26a69a)"
             }).showToast()
         });
     });
